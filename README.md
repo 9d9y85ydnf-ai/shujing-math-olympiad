@@ -26,6 +26,10 @@
 │   └── 讲义方法索引.md                 # 讲义与方法索引
 ├── sources/
 │   └── lectures/                       # 原始讲义资料
+├── book/                               # LaTeX 解析册工程
+│   ├── main.tex
+│   ├── build_markdown.py
+│   └── 题目清单.md
 ├── templates/
 │   └── 代数题解模板.md                 # 新题解模板
 └── problems/
@@ -42,6 +46,10 @@
 5. 在 `CHANGELOG.md` 中记录变化。
 
 ## 资料来源
+
+第 1 讲的本地 PDF 解析册由 book/main.tex 编译生成；生成文件位于
+output/pdf/，默认不提交到 GitHub。后续章节完成后，更新题目清单并把章节
+加入主工程即可。
 
 - 用户提供的《普通基本的古典不等式技术》讲义：用于整理调整法、局部放缩、琴生/切线法、(pqr) 法和张瑞祥法。
 - 用户提供的《高联二试代数系统课程（GG1）》完整讲义：见 [`sources/lectures/`](sources/lectures/)，用于建立章节索引和后续逐题题解。

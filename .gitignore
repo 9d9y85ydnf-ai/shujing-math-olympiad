@@ -6,6 +6,10 @@ Thumbs.db
 
 # 沙盒环境下使用的独立 Git 元数据目录
 .git-work/
+tmp/
+output/pdf/
+book/build/
+book/generated/
 
 # 临时输出与本地缓存
 tmp/
