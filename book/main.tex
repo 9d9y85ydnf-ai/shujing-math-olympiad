@@ -11,7 +11,7 @@
   colorlinks=true,
   linkcolor=blue!50!black,
   urlcolor=blue!50!black,
-  pdftitle={高联二试代数系统课程（GG1）解析册},
+  pdftitle={数学竞赛题解解析册模板},
   pdfauthor={Shujing Math Olympiad}
 }
 
@@ -19,7 +19,7 @@
 \setlist{nosep}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[LE,RO]{高联二试代数系统课程（GG1）解析册}
+\fancyhead[LE,RO]{数学竞赛题解解析册}
 \fancyhead[RE,LO]{中国高中数学竞赛}
 \fancyfoot[C]{\thepage}
 
@@ -29,24 +29,23 @@
 \begin{titlepage}
 \centering
 \vspace*{3cm}
-{\Huge\bfseries 高联二试代数系统课程（GG1）\par}
+{\Huge\bfseries 数学竞赛题解解析册模板\par}
 \vspace{1cm}
-{\LARGE 竞赛题解解析册\par}
-\vspace{2cm}
-{\large 第 1 讲：均值不等式\par}
+{\LARGE 可持续维护的 LaTeX 工程骨架\par}
 \vfill
 {\large Shujing Math Olympiad\par}
-{\large 2026\par}
 \end{titlepage}
 
 \tableofcontents
 
 \mainmatter
-\chapter{均值不等式}
-\input{chapters/gg1-01}
+% 将本地章节文件加入此处；章节正文默认被 .gitignore 屏蔽。
+\chapter{使用说明}
+本文件是解析册工程的公开模板。具体题目和解答应保存在本地章节文件中，编译前按需加入
+\verb|\\input| 或 \verb|\\include|。
 
 \backmatter
-\chapter{资料说明}
-本解析册题目来自用户提供的《高联二试代数系统课程（GG1）》原始 PDF。正式题解遵守项目中的中国高中数学竞赛知识边界；原题页码和题解完成状态见项目中的题目清单。
+\chapter{编译说明}
+使用 XeLaTeX 或 Tectonic 编译本文件。生成的 PDF、辅助文件和缓存均不提交到公开仓库。
 
 \end{document}

@@ -11,6 +11,13 @@ output/pdf/
 book/build/
 book/generated/
 
+# 本地题目、讲义、题解和章节正文，不进入公开仓库
+sources/lectures/
+problems/algebra/*.md
+!problems/algebra/README.md
+book/chapters/*.tex
+book/题目清单.md
+
 # 临时输出与本地缓存
 tmp/
 scratch/

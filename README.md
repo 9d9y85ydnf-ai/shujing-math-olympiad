@@ -1,64 +1,35 @@
 # Shujing Math Olympiad
 
-中国高中数学竞赛长期题解与方法整理项目。
+这是一个用于整理中国高中数学竞赛题解的本地工作项目。GitHub 公开仓库只保存通用的工作规范、题解模板、LaTeX 编译骨架和方法索引；具体题目、原始资料、题解正文及生成的 PDF 均保留在本地。
 
-本项目先从代数与不等式开始，目标是把每道题整理成可复核、可学习、可迁移的竞赛解析，并逐步扩展到函数、数列、复数、不定方程、几何、数论与组合。
+## 项目规范
 
-## 项目标准
+- `AGENTS.md`：长期工作规范，包括知识边界、定义域、等号和证明完整性要求。
+- `docs/`：竞赛代数审题流程与方法索引。
+- `templates/`：新题和章节的统一模板。
+- `book/`：可复用的 LaTeX 解析册工程与 Markdown 转换脚本。
+- `problems/`、`sources/`：本地题目和资料目录，默认不纳入公开仓库。
 
-- 最终成品以中国高中数学竞赛为知识边界。
-- 默认先给可誊写的竞赛答卷式主解，再给思路、等号和方法点评。
-- 所有关键放缩都说明依据、方向和成立条件。
-- 所有最值或不等式题都检查定义域、等号条件和边界情形。
-- 高等工具可以作为内部检验，但不作为默认成品证明；如确需使用，会明确标注超出高中竞赛范围。
+## 本地工作流
 
-详细规范见 [AGENTS.md](AGENTS.md) 和 [竞赛代数解题规范](docs/竞赛代数解题规范.md)。
+1. 阅读原始资料的页面图像，确认题目、下标、定义域和小问。
+2. 使用 `templates/` 中的模板撰写可誊写的竞赛主解。
+3. 检查放缩方向、等号兼容性和边界情形。
+4. 使用 `book/build_markdown.py` 将本地题解转换为章节 TeX。
+5. 使用 Tectonic 编译 `book/main.tex`，并渲染关键页面检查排版。
+6. 只将规范、模板和工程改进提交到 GitHub；具体内容留在本地。
+
+## 公开内容边界
+
+`.gitignore` 会屏蔽本地资料、题解、章节正文、生成文件和 PDF。提交前执行 `git status`、`git diff --check`，确认没有题目内容、个人密钥或临时文件进入提交。
 
 ## 目录
 
 ```text
-.
-├── AGENTS.md                         # 项目长期工作规范
-├── README.md                         # 项目说明
-├── CHANGELOG.md                      # 更新记录
-├── docs/
-│   ├── 竞赛代数解题规范.md             # 统一解题流程与书写规则
-│   └── 讲义方法索引.md                 # 讲义与方法索引
-├── sources/
-│   └── lectures/                       # 原始讲义资料
-├── book/                               # LaTeX 解析册工程
-│   ├── main.tex
-│   ├── build_markdown.py
-│   └── 题目清单.md
-├── templates/
-│   └── 代数题解模板.md                 # 新题解模板
-└── problems/
-    └── algebra/
-        └── README.md                  # 代数题解归档约定
+AGENTS.md
+CHANGELOG.md
+docs/
+templates/
+book/
+problems/algebra/README.md
 ```
-
-## 新增题解流程
-
-1. 将题目保存到 `problems/algebra/`，文件名包含来源、年份或主题。
-2. 按 `templates/代数题解模板.md` 写出主解和必要点评。
-3. 检查定义域、放缩方向、等号链和结论是否完整。
-4. 若使用了新方法，更新 `docs/讲义方法索引.md`。
-5. 在 `CHANGELOG.md` 中记录变化。
-
-## 资料来源
-
-第 1 讲的本地 PDF 解析册由 book/main.tex 编译生成；生成文件位于
-output/pdf/，默认不提交到 GitHub。后续章节完成后，更新题目清单并把章节
-加入主工程即可。
-
-- 用户提供的《普通基本的古典不等式技术》讲义：用于整理调整法、局部放缩、琴生/切线法、(pqr) 法和张瑞祥法。
-- 用户提供的《高联二试代数系统课程（GG1）》完整讲义：见 [`sources/lectures/`](sources/lectures/)，用于建立章节索引和后续逐题题解。
-- [中国数学会数学竞赛页面](https://www.cms.org.cn/Home/comp/comp/cid/12.html)：用于确认竞赛体系背景。
-- [中学数学奥林匹克教学大纲](https://sx.xxu.edu.cn/13Yzhongxueshuxueaolinpike-1511105802.pdf)：用于确认代数篇的范围框架。
-- [EasonSYC/maths-olympiad-notes](https://github.com/EasonSYC/maths-olympiad-notes)：用于参考中文竞赛笔记的专题组织方式。
-
-外部资料只作为方法参考，不直接替代题目的独立证明。
-
-## GitHub 更新
-
-项目计划发布为公开仓库 `shujing-math-olympiad`。每次发布前应先检查 `git diff`，只提交本次任务相关文件，并使用清晰、简短的提交说明。
