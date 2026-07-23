@@ -1,0 +1,22 @@
+# 编辑器与系统文件
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 沙盒环境下使用的独立 Git 元数据目录
+.git-work/
+
+# 临时输出与本地缓存
+tmp/
+scratch/
+preview/
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# Python 缓存
+__pycache__/
+*.py[cod]
