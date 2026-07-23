@@ -24,6 +24,8 @@
 ├── docs/
 │   ├── 竞赛代数解题规范.md             # 统一解题流程与书写规则
 │   └── 讲义方法索引.md                 # 讲义与方法索引
+├── sources/
+│   └── lectures/                       # 原始讲义资料
 ├── templates/
 │   └── 代数题解模板.md                 # 新题解模板
 └── problems/
@@ -42,6 +44,7 @@
 ## 资料来源
 
 - 用户提供的《普通基本的古典不等式技术》讲义：用于整理调整法、局部放缩、琴生/切线法、(pqr) 法和张瑞祥法。
+- 用户提供的《高联二试代数系统课程（GG1）》完整讲义：见 [`sources/lectures/`](sources/lectures/)，用于建立章节索引和后续逐题题解。
 - [中国数学会数学竞赛页面](https://www.cms.org.cn/Home/comp/comp/cid/12.html)：用于确认竞赛体系背景。
 - [中学数学奥林匹克教学大纲](https://sx.xxu.edu.cn/13Yzhongxueshuxueaolinpike-1511105802.pdf)：用于确认代数篇的范围框架。
 - [EasonSYC/maths-olympiad-notes](https://github.com/EasonSYC/maths-olympiad-notes)：用于参考中文竞赛笔记的专题组织方式。
